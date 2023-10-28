@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="hidden-counter ">
+        <div class="counter-container ">
+            <h1>counter</h1>
+            <h1 class="counter">0</h1>
+            <div class="btn">
+                <button onclick="negative()">-</button>
+                <button onclick="reset()">Reset</button>
+                <button onclick="positive()">+</button>
+            </div>
+
+        </div>
+    </div>
+    <!--============= AGE APP ======================-->
+    <div class="hidden-age hidden ">
+        <div class="age-container ">
+            <h1>Age Calculator</h1>
+            <h2>Enter your date of birth </h2>
+            <input type="date" id="date">
+            <div class="age-btn-container">
+                <button onclick="calAge()" class="btn-2"> Calculate Age</button>
+                <button onclick="ageReset()" class="btn-2">Reset</button>
+
+            </div>
+            <h2 id="age"></h2>
+            <small> @age calculated till the date 31-10-2023</small>
+        </div>
+    </div>
+    <!-- FORM APP========================= -->
+    <div class="hidden-form hidden">
+        <div class="form-container">
+            <h1>signup form</h1>
+            <form action="" name="signup"></form>
+            <input type="text" name="FirstName" id="FirstName" placeholder="FirstName" onkeyup="validateFirstName()" class="common-input">
+            <small id="errorFirstName" class="common-error"></small>
+            <br>
+
+            <input type="text" name="UserName" id="UserName" placeholder="UserName" onkeyup="validateUserName()" class="common-input">
+            <small id="errorUserName" class="common-error"></small><br>
+
+            <input type="text" name="email" id="email" placeholder="Email" onkeyup="validateemail()" class="common-input">
+            <small id="erroremail" class="common-error"></small><br>
+
+            <input type="text" name="password" id="password" placeholder="password" onkeyup="validatepassword()" class="common-input">
+            <small id="errorpassword" class="common-error">
+        </small><br>
+
+            <input type="text" name="telephone" id="telephone" placeholder="telephone" onkeyup="validatephone()" class="common-input">
+            <small id="errortelephone" class="common-error" class="errorTelphone"></small><br>
+
+            <input type="text" name="Pan" id="Pan" placeholder="Pan" onkeyup="validatepan()" class="common-input">
+            <small id="errorPan" class="common-error">
+               
+            </small>
+            <button onclick="resetform()" class="reset-form-btn btn-2">Reset</button>
+            <br>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div class="three_button">
+        <button id="counter-app" class="btn-2" onclick="counterApp()">CounterApp</button>
+        <button id="age-app" class="btn-2" onclick="ageApp()">AgeApp</button>
+        <button id="form-app" class="btn-2" onclick="formApp()">FormApp</button>
+    </div>
+
+
+</body>
+<script src="./assets/script.js"></script>
+
+
+</html>
