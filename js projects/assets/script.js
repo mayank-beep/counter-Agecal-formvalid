@@ -51,7 +51,7 @@ function calAge() {
     if (inputAge[1] == 1 || inputAge[1] == 3 || inputAge[1] == 5 || inputAge[1] == 7 || inputAge[1] == 8 || inputAge[1] == 10 || inputAge[1] == 12) {
         days = 31 - inputAge[2]
     } else if (inputAge[1] == 4 || inputAge[1] == 6 || inputAge[1] == 9 || inputAge[1] == 11) {
-        days = 31 - inputAge[2]
+        days = 30 - inputAge[2]
     } else if (inputAge[1] == 2) {
         days = 28 - inputAge[2]
     }
