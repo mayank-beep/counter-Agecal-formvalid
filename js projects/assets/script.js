@@ -60,7 +60,7 @@ function calAge() {
     if (inputAge[0] < 2023 || (inputAge[0] == 2023 && inputAge[1] <= 10)) {
         document.getElementById('age').innerHTML = `your age is ${year} years old and ${month} months and ${days} days `
     } else {
-        document.getElementById('age').innerHTML = "please select the date  less then 31-10-2023"
+        document.getElementById('age').innerHTML = "please select the date of birth  less then 31-10-2023"
 
     }
 
