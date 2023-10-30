@@ -39,6 +39,8 @@ function calAge() {
 
 
 
+
+
     if (inputAge[0] == 2023) {
         month = 10 - inputAge[1]
     } else {
@@ -55,10 +57,16 @@ function calAge() {
     }
 
     console.log(year, month, days);
-    document.getElementById('age').innerHTML = `your age is ${year} years old and ${month} months and ${days} days `
+    if (inputAge[0] < 2023 || (inputAge[0] == 2023 && inputAge[1] <= 10)) {
+        document.getElementById('age').innerHTML = `your age is ${year} years old and ${month} months and ${days} days `
+    } else {
+        document.getElementById('age').innerHTML = "please select the date  less then 31-10-2023"
+
+    }
 
 }
 //=================== formapp=========================
+//input fields
 let FirstName = document.getElementById('FirstName')
 let UserName = document.getElementById('UserName')
 let email = document.getElementById('email')
@@ -77,13 +85,14 @@ let errorPan = document.getElementById('errorPan')
 // regual expressions
 let FirstNameRegX = /^[a-zA-Z0-9_]{5,15}$/
 let UserNameRegx = /^[a-zA-Z0-9_]{5,12}$/
+let telephoneRegx = /^[6-9]\d{9}$/
 let emailRegx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]{1,}\.[a-zA-Z]{2,}$/
 let passwordRegx = /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d.*)(?=.*[@*#].*).{8,20}/gm
 let PanRegx = /^[A-Z]{5}[0-9]{4}[A-Z]$/
 
 // click functions
 function validatephone() {
-    if (telephone.value.match(/^[6-9]\d{9}$/)) {
+    if (telephone.value.match(telephoneRegx)) {
         telephone.style.borderColor = "green";
         errortelephone.textContent = ""
     } else {
@@ -150,7 +159,7 @@ function validatepan() {
         Pan.style.borderColor = "green"
         errorPan.textContent = ""
     } else {
-        errorPan.textContent = "should be valid pan card number"
+        errorPan.textContent = "should be valid pan card number for eg-ABCD1234E"
         errorPan.style.color = "red"
         Pan.style.borderColor = "red"
     }

@@ -61,6 +61,10 @@
         border-radius: 5px;
     }
     
+    .age-container small {
+        color: red
+    }
+    
     .age-container button,
     .reset-form-btn {
         cursor: pointer;
